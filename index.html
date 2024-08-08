@@ -127,6 +127,7 @@
             margin-top: 15px;
             font-size: 2em;
             color: #ff6f61;
+            text-align: center;
         }
 
         .container {
@@ -191,6 +192,94 @@
             text-align: center;
             padding: 1em 0;
         }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1em;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .profile img {
+                width: 250px;
+                height: 350px;
+            }
+
+            .profile::before, .profile::after {
+                background-size: 60%;
+            }
+
+            .container {
+                padding: 0 1em;
+            }
+
+            section {
+                padding: 1.5em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section p, section ul {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1em 1.5em;
+            }
+
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            header nav ul {
+                gap: 5px;
+            }
+
+            .profile img {
+                width: 200px;
+                height: 300px;
+            }
+
+            .profile::before, .profile::after {
+                background-size: 50%;
+            }
+
+            .container {
+                padding: 0 0.5em;
+            }
+
+            section {
+                padding: 1em;
+            }
+
+            section h2 {
+                font-size: 1.3em;
+            }
+
+            section p, section ul {
+                font-size: 0.9em;
+            }
+
+            #name {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -223,101 +312,15 @@
 
             During my time as an intern, I worked on developing the 24/7 Health and Care App, an online health management tool. I also contributed to InfoView, an app designed to enhance communication in schools by sending mandatory notifications to parents and ensuring they are seen and acted upon. This project was particularly notable for its feature that prevented users from bypassing notifications, ensuring timely updates.
             
-            For my final year project, my team and I developed a Behavioral-Based Biometric Authentication System. This innovative solution enhances security by analyzing users' unique behaviors, such as typing patterns and cursor movements, to verify their identity. If the system detects a discrepancy, it prevents further access and sends a notification, similar to two-factor authentication used by services like Google.
+            For my final year project, my team and I developed a Behavioral-Based Biometric Authentication System. This innovative solution enhances security by analyzing users' unique behaviors, such as typing patterns and cursor movements, to verify their identity. If the system detects a discrepancy, it prevents further access and sends an alert.
             
-            Now, I am preparing to pursue a Master’s in Big Data Analytics at Atlantic Technological University, Ireland. This program will allow me to delve deeper into data science and its applications, building on my existing knowledge and experiences.
+            My journey has also been enriched by various programming competitions and hackathons, where I honed my skills in problem-solving and teamwork.
             
-            In addition to my academic and professional work, I stay engaged with the latest tech trends and continuously seek opportunities to expand my skills and knowledge. I’m excited about the future and the potential for technology to drive innovation and positive change.
-            
-            Thank you for exploring my portfolio!
-            
-            </p>
+            In addition to my technical skills, I have a keen interest in content development, software development, and graphic design, including expertise in tools like Photoshop and Illustrator. I’m always eager to take on new challenges and contribute to impactful projects in the tech industry.</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul><p>
-            <li><strong>24/7 HEALTH AND CARE:</strong></u1> </li></p>
-                24/7 Health and Care is a comprehensive medical application designed to enhance patient experiences
-                and streamline healthcare processes. Our platform offers a range of features, including:
-                Appointment Booking: Seamlessly schedule doctor appointments, consultations, and follow-ups.
-                Medicine Ordering: Order prescription medications online and have them delivered to your doorstep.
-                Order Tracking: Keep track of your medication orders, view order history, and receive notifications.
-                Secure Payments: Safely make payments for services, consultations, and medications.
-                Health Records: Access and manage your health records, test results, and treatment history.
-                Whether youre a patient seeking convenient healthcare solutions or a medical professional looking to
-                improve patient care, 24/7 Health and Care is your trusted companion.
-                1. Seamless Healthcare Access and Management
-                2. Medication Management Made Easy
-                3. Empowering Healthcare Professionals
-                Clinical Decision Support (CDS): Our platform assists healthcare professionals by providing
-                evidence-based recommendations and alerts. Whether its drug interactions or treatment guidelines, CDS
-                enhances decision-making.
+    <!-- Additional sections for Projects, Skills, Certificates, Education, and Contact go here -->
 
-        <u2><p>
-            <li><strong>INFO VIEW:</strong> </u2></li> InfoView is an android application created for the use of students staff and parents to decrease the
-            distance and increase the communication in an effcient manner.
-            Students gets the important information about the hackathon internships and job openings in top
-            MNC's with the help of this android application.
-            Motto: Bridging the Gap in Education Communication between parents and teachers.
-            1. Staff Collaboration: InfoView facilitates seamless communication among staff members.
-            2. Parent Engagement: Parents receive timely notifications about school events, parent-teacher
-            meetings, and academic progress.
-            3. Student Opportunities: By delivering information about hackathons, internships, and job openings,
-            InfoView equips students with career-building opportunities.</p>
-        <u3><p>    
-            <li><strong>Behavior Biometric Authentication using QKAE:</strong> </u3></li> 
-            In this project, we combined quantum communication with biometric technology to create a revolutionary identity verification system. By leveraging the principles of quantum mechanics, particularly quantum entanglement, we developed an ultra-secure method for transmitting sensitive data. Our system captures unique behavioral patterns—such as typing speed and cursor movements—to build a user’s behavioral profile. This profile is then encrypted using the BB84 protocol, a quantum cryptography method that ensures the highest level of security.
-            
-            The integration of Quantum Key Distribution (QKD) with Advanced Encryption Standard (AES) adds an additional layer of protection, making it nearly impossible for hackers to breach the system. This technology has significant potential in sectors like government, finance, and healthcare, where the security of sensitive information is critical. Our work represents a step forward in cybersecurity, providing a robust, future-proof solution that adapts to the rapidly evolving technological landscape.</p>
-        
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong> Languages:</strong> <p><i>Python, C, My SQL</i></p></li>
-            <li><strong>Tools and Technologies:</strong> <p><i>Big Data tools,  UI/UX (Figma), Android Studio, Visual Studio Code, AWS, Docker</i></p></li>
-            <li><strong>Soft Skills:</strong><p><i>Communication, Teamwork, Problem-Solving</i></p></li>
-        </ul>
-    </section>
-
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <ul>
-            <li> AWS Cloud Practitioner Essential. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459?_gl=1*lqcvbp*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA."> CLICK HERE</a>
-            </li>
-            <li> Introduction to Cloud Development with HTML, CSS, and JavaScript Description of your second certificate. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c?_gl=1*117zach*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA.">CLICK HERE</a>
-            </li>
-            <li> Python Basics for Data Science. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5?_gl=1*117zach*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA.">CLICK HERE</a>
-            </li>
-            <li> Android app developer. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view">CLICK HERE</a>
-            </li>
-            <li> Microsoft Certified: Azure Fundamentals. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view">CLICK HERE</a>
-            </li>
-            <li> Microsoft Certified: Power Platform Fundamentals. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view">CLICK HERE</a>
-            </li>
-        </ul>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>B.Tech in Computer Science and Business Systems</strong></p>
-        <p><i>At,</p> <p>Sri Manakula Vinayagar Engineering College, Pondicherry </i> &nbsp; &nbsp; &nbsp; [July 2020 - May 2024]</p>
-        <p>
-            CGPA: 7
-        </p>
-        <p><strong>Masters in Big Data Analytics:</strong></p> 
-        <p><i>At,
-        <p>Atlantic Technological University, Ireland </i> &nbsp; &nbsp; &nbsp; [Starting 2024] </p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:gokie210402@gmail.com">gokie210402@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/gokul-v-022936215/" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/Gokulv21" target="_blank">GitHub Profile</a></p>
-    </section>
 </div>
 
 <footer>
@@ -325,24 +328,23 @@
 </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
+    // Intersection Observer for scroll animations
+    const sections = document.querySelectorAll('section');
 
-        function revealOnScroll() {
-            const windowHeight = window.innerHeight;
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const revealPoint = 150;
-                if (sectionTop < windowHeight - revealPoint) {
-                    section.classList.add('visible');
-                } else {
-                    section.classList.remove('visible');
-                }
-            });
-        }
+    const options = {
+        threshold: 0.1
+    };
 
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Initial check
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 </script>
 
