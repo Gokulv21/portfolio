@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul V - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3f3f3f;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #ff6f61; /* Accent color */
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-out;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .profile::before, .profile::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .profile::before {
+            left: -50%;
+            background: url('computer.svg') no-repeat center center;
+            background-size: 80%;
+            animation: slideInLeft 3s ease-in-out infinite;
+        }
+
+        .profile::after {
+            right: -50%;
+            background: url('coding.svg') no-repeat center center;
+            background-size: 80%;
+            animation: slideInRight 3s ease-in-out infinite;
+        }
+
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        #name {
+            margin-top: 15px;
+            font-size: 2em;
+            color: #ff6f61;
+        }
+
+        .container {
+            padding: 0 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2em;
+            padding: 2em;
+            border-radius: 10px;
+            background: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 10px;
+        }
+
+        section p, section ul {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #ff6f61;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="profile-container">
+    <div class="profile">
+        <img src="pic.jpg" alt="Gokul V">
+        <div id="name">Gokul V</div>
+    </div>
+</div>
+
+<div class="container">
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m Gokul V, a dedicated technology enthusiast with a B.Tech in Computer Science and Business Systems from Sri Manakula Vinayagar Engineering College, Pondicherry. My journey in technology has been marked by hands-on experience and impactful projects.
+
+            During my time as an intern, I worked on developing the 24/7 Health and Care App, an online health management tool. I also contributed to InfoView, an app designed to enhance communication in schools by sending mandatory notifications to parents and ensuring they are seen and acted upon. This project was particularly notable for its feature that prevented users from bypassing notifications, ensuring timely updates.
+            
+            For my final year project, my team and I developed a Behavioral-Based Biometric Authentication System. This innovative solution enhances security by analyzing users' unique behaviors, such as typing patterns and cursor movements, to verify their identity. If the system detects a discrepancy, it prevents further access and sends a notification, similar to two-factor authentication used by services like Google.
+            
+            Now, I am preparing to pursue a Master’s in Big Data Analytics at Atlantic Technological University, Ireland. This program will allow me to delve deeper into data science and its applications, building on my existing knowledge and experiences.
+            
+            In addition to my academic and professional work, I stay engaged with the latest tech trends and continuously seek opportunities to expand my skills and knowledge. I’m excited about the future and the potential for technology to drive innovation and positive change.
+            
+            Thank you for exploring my portfolio!
+            
+            </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul><p>
+            <li><strong>24/7 HEALTH AND CARE:</strong></u1> </li></p>
+                24/7 Health and Care is a comprehensive medical application designed to enhance patient experiences
+                and streamline healthcare processes. Our platform offers a range of features, including:
+                Appointment Booking: Seamlessly schedule doctor appointments, consultations, and follow-ups.
+                Medicine Ordering: Order prescription medications online and have them delivered to your doorstep.
+                Order Tracking: Keep track of your medication orders, view order history, and receive notifications.
+                Secure Payments: Safely make payments for services, consultations, and medications.
+                Health Records: Access and manage your health records, test results, and treatment history.
+                Whether youre a patient seeking convenient healthcare solutions or a medical professional looking to
+                improve patient care, 24/7 Health and Care is your trusted companion.
+                1. Seamless Healthcare Access and Management
+                2. Medication Management Made Easy
+                3. Empowering Healthcare Professionals
+                Clinical Decision Support (CDS): Our platform assists healthcare professionals by providing
+                evidence-based recommendations and alerts. Whether its drug interactions or treatment guidelines, CDS
+                enhances decision-making.
+
+        <u2><p>
+            <li><strong>INFO VIEW:</strong> </u2></li> InfoView is an android application created for the use of students staff and parents to decrease the
+            distance and increase the communication in an effcient manner.
+            Students gets the important information about the hackathon internships and job openings in top
+            MNC's with the help of this android application.
+            Motto: Bridging the Gap in Education Communication between parents and teachers.
+            1. Staff Collaboration: InfoView facilitates seamless communication among staff members.
+            2. Parent Engagement: Parents receive timely notifications about school events, parent-teacher
+            meetings, and academic progress.
+            3. Student Opportunities: By delivering information about hackathons, internships, and job openings,
+            InfoView equips students with career-building opportunities.</p>
+        <u3><p>    
+            <li><strong>Behavior Biometric Authentication using QKAE:</strong> </u3></li> 
+            In this project, we combined quantum communication with biometric technology to create a revolutionary identity verification system. By leveraging the principles of quantum mechanics, particularly quantum entanglement, we developed an ultra-secure method for transmitting sensitive data. Our system captures unique behavioral patterns—such as typing speed and cursor movements—to build a user’s behavioral profile. This profile is then encrypted using the BB84 protocol, a quantum cryptography method that ensures the highest level of security.
+            
+            The integration of Quantum Key Distribution (QKD) with Advanced Encryption Standard (AES) adds an additional layer of protection, making it nearly impossible for hackers to breach the system. This technology has significant potential in sectors like government, finance, and healthcare, where the security of sensitive information is critical. Our work represents a step forward in cybersecurity, providing a robust, future-proof solution that adapts to the rapidly evolving technological landscape.</p>
+        
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong> Languages:</strong> <p><i>Python, C, My SQL</i></p></li>
+            <li><strong>Tools and Technologies:</strong> <p><i>Big Data tools,  UI/UX (Figma), Android Studio, Visual Studio Code, AWS, Docker</i></p></li>
+            <li><strong>Soft Skills:</strong><p><i>Communication, Teamwork, Problem-Solving</i></p></li>
+        </ul>
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <ul>
+            <li> AWS Cloud Practitioner Essential. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459?_gl=1*lqcvbp*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA."> CLICK HERE</a>
+            </li>
+            <li> Introduction to Cloud Development with HTML, CSS, and JavaScript Description of your second certificate. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c?_gl=1*117zach*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA.">CLICK HERE</a>
+            </li>
+            <li> Python Basics for Data Science. &nbsp; &nbsp; &nbsp; <a href="https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5?_gl=1*117zach*_ga*OTI4NTk1NTAxLjE3MDYzNjE1OTM.*_ga_D3KS4KMDT0*MTcxMDQyMjk2MS43LjEuMTcxMDQyMzA0Ni40OC4wLjA.">CLICK HERE</a>
+            </li>
+            <li> Android app developer. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view">CLICK HERE</a>
+            </li>
+            <li> Microsoft Certified: Azure Fundamentals. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view">CLICK HERE</a>
+            </li>
+            <li> Microsoft Certified: Power Platform Fundamentals. &nbsp; &nbsp; &nbsp; <a href="https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view">CLICK HERE</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>B.Tech in Computer Science and Business Systems</strong></p>
+        <p><i>At,</p> <p>Sri Manakula Vinayagar Engineering College, Pondicherry </i> &nbsp; &nbsp; &nbsp; [July 2020 - May 2024]</p>
+        <p>
+            CGPA: 7
+        </p>
+        <p><strong>Masters in Big Data Analytics:</strong></p> 
+        <p><i>At,
+        <p>Atlantic Technological University, Ireland </i> &nbsp; &nbsp; &nbsp; [Starting 2024] </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:gokie210402@gmail.com">gokie210402@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/gokul-v-022936215/" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/Gokulv21" target="_blank">GitHub Profile</a></p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Gokul V. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const revealPoint = 150;
+                if (sectionTop < windowHeight - revealPoint) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>
+
+</body>
+</html>
