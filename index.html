@@ -183,7 +183,34 @@
 
         a:hover {
             border-bottom: 2px solid #ff6f61;
-        }
+     	}
+
+	 @media (max-width: 768px) { /* Mobile styles */
+           header nav ul {
+               flex-direction: column; /* Stack items */
+	       align-items: flex-end; /* Align to the right */
+           }
+
+ 	   header nav ul li {
+               text-align: right; /* Align text to the right */
+           }
+ 
+	   header {
+               text-align: center; /* Center heading on mobile */
+           }
+
+           .container {
+               padding-left: 1em; 
+               padding-right: 1em; 
+           }
+
+           section h2 {
+               font-size: 1.5em; /* Smaller headings */
+           }
+           section p, section ul {
+               font-size: 1em; /* Smaller text */
+           }
+       }
 
         footer {
             background-color: #1e1e1e;
@@ -211,7 +238,7 @@
 
 <div class="profile-container">
     <div class="profile">
-        <img src="Main photo(2).jpg" alt="Gokul V">
+        <img src="F:\My projects (leisure)\My portfolio\Main photo(2).jpg" alt="Gokul V">
         <div id="name">Gokul V</div>
     </div>
 </div>
@@ -306,7 +333,6 @@
         <p><i>At,</p> <p>Sri Manakula Vinayagar Engineering College, Pondicherry </i> &nbsp; &nbsp; &nbsp; [July 2020 - May 2024]</p>
         <p>
             CGPA: 7
-        </p>
     </section>
 
     <section id="contact">
